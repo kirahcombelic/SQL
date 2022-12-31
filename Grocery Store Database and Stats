@@ -1,0 +1,41 @@
+--Create a grocery store database
+
+CREATE TABLE store
+(id integer primary key, name text, price integer, category text, sold integer); 
+
+INSERT INTO store
+VALUES (1, "diapers", 20, "baby", 21);
+INSERT INTO store VALUES (2, "wet wipes", 5, "baby", 24);
+INSERT INTO store VALUES (3, "cheddar cheese", 6, "dairy", 49);
+INSERT INTO store VALUES (4, "whole milk", 6, "dairy", 31);
+INSERT INTO store VALUES (5, "jelly", 3, "dry goods", 18);
+INSERT INTO store VALUES (6, "peanut butter", 4, "dry goods", 18);
+INSERT INTO store VALUES (7, "skim milk", 4, "dairy", 10);
+INSERT INTO store VALUES (8, "chicken breasts", 8, "meat", 68);
+INSERT INTO store VALUES (9, "bacon", 5, "meat", 47);
+INSERT INTO store VALUES (10, "cereal", 3, "dry goods", 27);
+INSERT INTO store VALUES (11, "eggs", 4, "cold goods", 49);
+INSERT INTO store VALUES (12, "frozen waffles", 5, "cold goods", 32);
+INSERT INTO store VALUES (13, "canned beans", 2, "dry goods", 79);
+INSERT INTO store VALUES (14, "canned soup", 3, "dry goods", 41);
+INSERT INTO store VALUES (15, "bread", 4, "dry goods", 68);
+
+--Display the database
+SELECT * FROM store;
+
+--How many dry goods items were sold?
+SELECT category = "dry goods", SUM(sold) FROM store WHERE category = "dry goods";
+
+--How many total items were sold?
+SELECT SUM(sold) FROM store;
+
+--Display the database ordered by price
+SELECT * FROM store ORDER BY price desc;
+
+--What is the average price of a dry goods item?
+SELECT AVG(price) "average dry goods price" FROM store WHERE category = "dry goods";
+
+--What are the five most popular items sold?
+SELECT name "most popular items" FROM store
+ORDER BY sold desc
+limit 5;
