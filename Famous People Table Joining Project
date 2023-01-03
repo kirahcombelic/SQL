@@ -1,0 +1,117 @@
+/* Create table about the people and what they do here */
+
+CREATE TABLE famous_people(
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+name TEXT,
+age INTEGER,
+gender TEXT,
+birthday TEXT,
+career TEXT);
+
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("andrew garfield", 39, "male", "08/20/1983", "actor"); 
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("zoe kravitz", 34, "female", "12/01/1988", "actor");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("quinta brunson", 33, "female", "12/21/1989", "actor");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("channing tatum", 42, "male", "04/26/1980", "actor"); 
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("mila kunis", 39, "female", "08/14/1983", "actor");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("faith ringgold", 92, "female", "10/08/1930", "painter");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("nathan chen", 23, "male", "05/05/1999", "figure skater");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("amanda seyfried", 37, "female", "12/03/1985", "actor");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("miranda lambert", 39, "female", "11/10/1983", "singer");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("taika waitiki", 47, "male", "08/16/1975", "filmmaker");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("zendaya", 26, "female", "09/01/1996", "actor");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("mary j. blige", 51, "female", "01/11/1971", "singer");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("jon batiste", 36, "male", "11/11/1986", "singer");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("peng shuai", 36, "female", "01/08/1986", "tennis player");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("adele", 34, "female", "05/05/1988", "singer");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("rafael nadal", 36, "male", "06/03/1986", "tennis player");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("keanu reeves", 58, "male", "09/02/1964", "actor");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("issa rae", 37, "female", "01/12/1985", "actor");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("questlove", 52, "male", "01/20/1971", "musician");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("candace parker", 36, "female", "04/19/1986", "basketball player");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("volodymyr zelenskyy", 44, "male", "01/25/1978", "politician");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("joe biden", 80, "male", "11/20/1942", "politician");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("samia suluhu hassan", 62, "female", "01/27/1960", "politician");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("oprah winfrey", 68, "female", "01/29/1954", "talk show host");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("michelle yeoh", 60, "female", "08/06/1962", "actor");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("hwang dong-hyuk", 51, "male", "05/26/1971", "filmmaker");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("sally rooney", 31, "female", "02/20/1991", "author");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("elizabeth alexander", 60, "female", "05/30/1962", "poet");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("michelle zauner", 33, "female", "03/29/1989", "musician");
+INSERT INTO famous_people(name, age, gender, birthday, career) VALUES ("pete davidson", 29, "male", "11/16/1993", "comedian");
+
+
+SELECT * FROM famous_people;
+
+
+CREATE TABLE zodiac_signs(
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+zodiac TEXT);
+
+INSERT INTO zodiac_signs(zodiac) VALUES ("leo");
+INSERT INTO zodiac_signs(zodiac) VALUES ("sagittarius");
+INSERT INTO zodiac_signs(zodiac) VALUES ("sagittarius");
+INSERT INTO zodiac_signs(zodiac) VALUES ("taurus");
+INSERT INTO zodiac_signs(zodiac) VALUES ("leo");
+INSERT INTO zodiac_signs(zodiac) VALUES ("libra");
+INSERT INTO zodiac_signs(zodiac) VALUES ("taurus");
+INSERT INTO zodiac_signs(zodiac) VALUES ("sagittarius");
+INSERT INTO zodiac_signs(zodiac) VALUES ("scorpio");
+INSERT INTO zodiac_signs(zodiac) VALUES ("leo");
+INSERT INTO zodiac_signs(zodiac) VALUES ("virgo");
+INSERT INTO zodiac_signs(zodiac) VALUES ("capricorn");
+INSERT INTO zodiac_signs(zodiac) VALUES ("scorpio");
+INSERT INTO zodiac_signs(zodiac) VALUES ("capricorn");
+INSERT INTO zodiac_signs(zodiac) VALUES ("taurus");
+INSERT INTO zodiac_signs(zodiac) VALUES ("gemini");
+INSERT INTO zodiac_signs(zodiac) VALUES ("virgo");
+INSERT INTO zodiac_signs(zodiac) VALUES ("capricorn");
+INSERT INTO zodiac_signs(zodiac) VALUES ("aquarius");
+INSERT INTO zodiac_signs(zodiac) VALUES ("aries");
+INSERT INTO zodiac_signs(zodiac) VALUES ("aquarius");
+INSERT INTO zodiac_signs(zodiac) VALUES ("scorpio");
+INSERT INTO zodiac_signs(zodiac) VALUES ("aquarius");
+INSERT INTO zodiac_signs(zodiac) VALUES ("aquarius");
+INSERT INTO zodiac_signs(zodiac) VALUES ("leo");
+INSERT INTO zodiac_signs(zodiac) VALUES ("gemini");
+INSERT INTO zodiac_signs(zodiac) VALUES ("pisces");
+INSERT INTO zodiac_signs(zodiac) VALUES ("gemini");
+INSERT INTO zodiac_signs(zodiac) VALUES ("aries");
+INSERT INTO zodiac_signs(zodiac) VALUES ("scorpio");
+
+
+CREATE TABLE heritage(
+id INTEGER PRIMARY KEY,
+nationality TEXT,
+ethnicity TEXT);
+
+INSERT INTO heritage(nationality, ethnicity) VALUES ("american/british", "jewish");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("american", "african american/jewish");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("american", "african american");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("american", "caucasian");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("ukranian/american", "ukranian/jewish");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("american", "african american");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("american", "chinese");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("american", "caucasian");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("american", "caucasian");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("new zealand", "jewish/maori");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("american", "african american/caucasian");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("american", "african american");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("american", "african american");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("chinese", "chinese");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("english", "caucasian");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("spanish", "spanish");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("canadian", "english/hawaiian/chinese/caucasian");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("american", "senegalese/african american");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("american", "african american");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("american", "african american/caucasian");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("ukranian", "ukranian");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("american", "caucasian");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("tanzanian", "tanzanian");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("american", "african american");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("malaysian", "malaysian/chinese");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("south korean", "korean");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("irish", "caucasian");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("american", "african american");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("south korean", "korean");
+INSERT INTO heritage(nationality, ethnicity) VALUES ("american", "jewish"/"american");
+
