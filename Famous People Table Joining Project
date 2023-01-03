@@ -115,3 +115,48 @@ INSERT INTO heritage(nationality, ethnicity) VALUES ("american", "african americ
 INSERT INTO heritage(nationality, ethnicity) VALUES ("south korean", "korean");
 INSERT INTO heritage(nationality, ethnicity) VALUES ("american", "jewish"/"american");
 
+
+--show the zodiac sign of each famous person
+
+SELECT famous_people.name, zodiac_signs.zodiac 
+FROM famous_people
+JOIN zodiac_signs
+ON famous_people.id = zodiac_signs.id
+ORDER BY zodiac_signs.zodiac;
+
+
+--display the zodiac sign of all the actors, organize alphabetical order
+
+SELECT famous_people.name, famous_people.career, zodiac_signs.zodiac 
+FROM famous_people
+JOIN zodiac_signs
+ON famous_people.id = zodiac_signs.id
+WHERE career = "actor"
+ORDER BY famous_people.name;
+
+
+--what are the zodiac signs and gender of all the politicians?
+
+SELECT famous_people.name, famous_people.career, famous_people.gender, zodiac_signs.zodiac 
+FROM famous_people
+JOIN zodiac_signs
+ON famous_people.id = zodiac_signs.id
+WHERE career = "politician"
+ORDER BY famous_people.name;
+
+
+--which famous people are air signs (aquarius, gemini, and libra)?
+
+SELECT famous_people.name, famous_people.career, famous_people.gender, zodiac_signs.zodiac 
+FROM famous_people
+JOIN zodiac_signs
+ON famous_people.id = zodiac_signs.id
+WHERE zodiac IN ("aquarius", "gemini", "libra")
+ORDER BY zodiac;
+
+
+--how many of the famous people are singers?
+
+SELECT COUNT(career) AS singers
+FROM famous_people
+WHERE career="singer";
