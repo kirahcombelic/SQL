@@ -1,4 +1,4 @@
-/* Create table about the people and what they do here */
+/* 30 of TIMES 2022 most influential people with information in 3 tables, practicing joining tables to analyze data */
 
 CREATE TABLE famous_people(
 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -160,3 +160,18 @@ ORDER BY zodiac;
 SELECT COUNT(career) AS singers
 FROM famous_people
 WHERE career="singer";
+
+
+-display the list of famous people from youngest to oldest
+
+SELECT name, age FROM famous_people
+ORDER BY age asc;
+
+
+--display only the famous people under 40 years old, and their careers
+
+SELECT name, age, career FROM
+famous_people
+WHERE age <40
+ORDER BY age asc;
+
